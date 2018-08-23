@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ThucDonHangNgay</string>
+    <string name="title_activity_food_list">FoodList</string>
+    <string name="title_activity_menu_list">MenuList</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+
+
+    <string name="user_name">Eden Nguyen</string>
+    <string name="change_avatar">Change avatar</string>
+
+    <string name="food_list">Food List</string>
+    <string name="menu_list">Menu</string>
+
+    <string name="support">Support</string>
+    <string name="edit_profile">Profile</string>
+    <string name="about_us">About Us</string>
+
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="order_activity">Order</string>
+    <string name="title_activity_add_new_food">AddNewFood</string>
+
+
+    <!--Menu items-->
+    <string name="menu_item_1">Thực đơn</string>
+    <string name="menu_item_2">Danh sách món ăn</string>
+    <string name="menu_item_3">Món ăn yêu thích</string>
+    <string name="menu_item_4">Liên hệ</string>
+    <string name="logOut">Đăng xuất</string>
+
+    <!--Tab Titles-->
+    <string name="tabTitle1">Theo ngày</string>
+    <string name="tabTitle2">Theo tuần</string>
+
+    <!--This is for Card View-->
+    <string name="foodTitle1">Canh khổ qua</string>
+    <string name="levelName">Độ khó:</string>
+    <string name="level1">Dễ</string>
+    <string name="timeName">Thời gian:</string>
+    <string name="time">20 phút</string>
+</resources>

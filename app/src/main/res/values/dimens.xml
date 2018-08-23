@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="btn_fab_size">56dp</dimen>
+    <dimen name="btn_fab_margins">16dp</dimen>
+    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="comment_avatar_size">55dp</dimen>
+    <dimen name="icon_normal">25dp</dimen>
+    <dimen name="icon_small">20dp</dimen>
+    <dimen name="cardViewHeight">200dp</dimen>
+</resources>
