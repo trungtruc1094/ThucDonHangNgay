@@ -17,7 +17,8 @@
             android:layout_centerInParent="true"
             android:id="@+id/foodImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/cardViewHeight"
+            android:scaleType="centerCrop"
             android:src="@drawable/canhkhoqua" />
 
         <TextView
@@ -27,7 +28,7 @@
             android:id="@+id/foodTitle"
             style="@style/foodCardTitle"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/cardViewHeight"
             android:gravity="center"
             android:text="@string/foodTitle1"
             android:background="#7d000000"/>

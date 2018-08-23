@@ -20,10 +20,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
                     android:src="@drawable/breakfast"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -35,7 +37,13 @@
             <!--Content Details-->
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/cardViewHeight"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingTop="10dp"
                 android:id="@+id/pagerMorning" />
 
         </LinearLayout>
@@ -51,10 +59,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
                     android:src="@drawable/afternoon"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -66,8 +76,14 @@
             <!--Content Details-->
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/pagerAfternoon" />
+                android:layout_height="@dimen/cardViewHeight"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingTop="10dp"
+                android:id="@+id/pagerLunch" />
 
         </LinearLayout>
 
@@ -82,10 +98,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
                     android:src="@drawable/dinner"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -97,7 +115,13 @@
             <!--Content Details-->
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="@dimen/cardViewHeight"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingTop="10dp"
                 android:id="@+id/pagerDinner" />
 
         </LinearLayout>

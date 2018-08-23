@@ -69,11 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 switch (tab.getPosition()){
                     case 0:
                         currentDateLayout.setVisibility(View.VISIBLE);
+                        dayOfWeekLayout.setVisibility(View.INVISIBLE);
                         pagerAdapter1 = new PagerAdapter1(getSupportFragmentManager());
                         viewPager.setAdapter(pagerAdapter1);
                         break;
                     case 1:
                         currentDateLayout.setVisibility(View.INVISIBLE);
+                        dayOfWeekLayout.setVisibility(View.VISIBLE);
                         viewPager.setAdapter(new PagerAdapter2(getSupportFragmentManager()));
                         tabLayoutDayOfWeek.setupWithViewPager(viewPager);
                         tabLayoutDayOfWeek.setTabTextColors(getResources().getColor(R.color.tab_selected), getResources().getColor(R.color.tab_selected));

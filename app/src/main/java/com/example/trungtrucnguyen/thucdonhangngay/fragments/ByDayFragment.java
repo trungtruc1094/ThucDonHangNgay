@@ -11,13 +11,18 @@ import android.view.ViewGroup;
 
 import com.example.trungtrucnguyen.thucdonhangngay.CardFragmentPagerAdapter;
 import com.example.trungtrucnguyen.thucdonhangngay.R;
+import com.example.trungtrucnguyen.thucdonhangngay.ShadowTransformer;
 import com.example.trungtrucnguyen.thucdonhangngay.utils.DimensionUtils;
 
 
 public class ByDayFragment extends Fragment {
 
     //    private static float baseElevation = 10;
-    private ViewPager viewPager;
+    private ViewPager viewPagerBreakfast;
+    private ViewPager viewPagerLunch;
+    private ViewPager viewPagerDinner;
+
+    private CardFragmentPagerAdapter cardFragmentPagerAdapter;
 
     public ByDayFragment() {
         // Required empty public constructor
@@ -32,12 +37,26 @@ public class ByDayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_by_day, container, false);
-        viewPager = view.findViewById(R.id.pagerMorning);
-        viewPager.setAdapter(new CardFragmentPagerAdapter(getActivity().getSupportFragmentManager(), DimensionUtils.dpToPixels(2, getActivity())));
+        viewPagerBreakfast = view.findViewById(R.id.pagerMorning);
+        viewPagerLunch = view.findViewById(R.id.pagerLunch);
+        viewPagerDinner = view.findViewById(R.id.pagerDinner);
+
+        setUpShadowTransformerForFragments(viewPagerBreakfast);
+        setUpShadowTransformerForFragments(viewPagerLunch);
+        setUpShadowTransformerForFragments(viewPagerDinner);
 
         return view;
     }
 
+    private void setUpShadowTransformerForFragments(ViewPager viewPager) {
+        cardFragmentPagerAdapter = new CardFragmentPagerAdapter(getActivity().getSupportFragmentManager(), DimensionUtils.dpToPixels(2, getActivity()));
+        ShadowTransformer fragmentCardShadowTransformer = new ShadowTransformer(viewPager, cardFragmentPagerAdapter);
+        fragmentCardShadowTransformer.enableScaling(true);
+
+        viewPager.setAdapter(cardFragmentPagerAdapter);
+        viewPager.setPageTransformer(false, fragmentCardShadowTransformer);
+        viewPager.setOffscreenPageLimit(3);
+    }
 
 
 }
