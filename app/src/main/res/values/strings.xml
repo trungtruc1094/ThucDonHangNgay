@@ -42,4 +42,5 @@
     <string name="level1">Dễ</string>
     <string name="timeName">Thời gian:</string>
     <string name="time">20 phút</string>
+    <string name="title_activity_food_details">FoodDetailsActivity</string>
 </resources>

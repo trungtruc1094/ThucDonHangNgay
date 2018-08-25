@@ -16,5 +16,6 @@
     <color name="tab_selected">#02173D</color>
     <color name="tab_unselected">#FFFFFF</color>
     <color name="green">#35dc0f</color>
+    <color name="detailItems">#D8D8D8</color>
 
 </resources>
