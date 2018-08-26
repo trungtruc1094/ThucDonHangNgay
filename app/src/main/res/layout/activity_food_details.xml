@@ -19,21 +19,23 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapseToolbar"
             android:layout_width="match_parent"
-            android:layout_height="256dp"
+            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/app_bar_color"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:titleEnabled="false">
 
+
+            <!--Image Food & Item Bar-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!--Image-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3">
+                    android:layout_height="@dimen/image_height_detail">
 
                     <ImageView
                         android:id="@+id/foodImage"
@@ -52,79 +54,22 @@
                         android:background="@android:color/black"
                         android:fitsSystemWindows="true"/>
 
-                    <!--Tool Bar-->
-                    <RelativeLayout
-                        android:id="@+id/toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/actionBarSize"
-                        android:layout_gravity="top"
-                        android:layout_marginBottom="48dp"
-                        app:layout_collapseMode="pin"
-                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-                        <LinearLayout
-                            android:padding="5dp"
-                            android:descendantFocusability="blocksDescendants"
-                            android:id="@+id/navigationItem"
-                            android:layout_marginLeft="10dp"
-                            android:layout_centerVertical="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:layout_width="@dimen/icon_normal"
-                                android:layout_height="@dimen/icon_normal"
-                                android:src="@drawable/back_arrow"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"/>
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/foodTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toRightOf="@id/navigationItem"
-                            android:layout_marginLeft="15dp"
-                            android:textSize="25dp"
-                            android:textStyle="italic"
-                            android:textColor="#ffff"
-                            android:text="Canh khổ qua"/>
-
-                        <LinearLayout
-                            android:padding="5dp"
-                            android:descendantFocusability="blocksDescendants"
-                            android:id="@+id/searchItem"
-                            android:layout_marginLeft="0dp"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true">
-                            <ImageView
-                                android:layout_width="@dimen/icon_normal"
-                                android:layout_height="@dimen/icon_normal"
-                                android:src="@drawable/favorite"
-                                />
-                        </LinearLayout>
-
-                    </RelativeLayout>
                 </RelativeLayout>
 
                 <!--Items-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:background="#ffff"
-                    android:layout_weight="1">
+                    android:layout_height="@dimen/item_height_detail"
+                    android:background="#ffff">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_margin="10dp"
-                        android:background="@color/detailItems"
-                        android:padding="10dp">
+                        android:gravity="center_vertical"
+                        android:background="@drawable/detail_items"
+                        android:padding="5dp">
 
                         <!--Time-->
                         <LinearLayout
@@ -135,15 +80,24 @@
                             android:gravity="center_horizontal">
 
                             <TextView
+                                style="@style/detail_items_title"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/dark_grey_blue"
                                 android:text="Thời gian"/>
                             <TextView
+                                style="@style/detail_items_value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/red_pink"
                                 android:text="20 phút"/>
 
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="#979797" />
 
                         <!--Level-->
                         <LinearLayout
@@ -154,14 +108,23 @@
                             android:gravity="center_horizontal">
 
                             <TextView
+                                style="@style/detail_items_title"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/dark_grey_blue"
                                 android:text="Độ khó"/>
                             <TextView
+                                style="@style/detail_items_value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/red_pink"
                                 android:text="Dễ"/>
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="#979797" />
 
                         <!--Rating-->
                         <LinearLayout
@@ -172,12 +135,16 @@
                             android:gravity="center_horizontal">
 
                             <TextView
+                                style="@style/detail_items_title"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/dark_grey_blue"
                                 android:text="Rating"/>
                             <TextView
+                                style="@style/detail_items_value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/red_pink"
                                 android:text="145"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -185,22 +152,45 @@
 
             </LinearLayout>
 
+            <!--Tool Bar-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/htab_tabs"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
 
-        app:tabIndicatorColor="@android:color/white"
-        app:tabSelectedTextColor="@android:color/white" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/foodDetailViewPager"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom|end"
+        android:background="#c1c1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/htab_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="58dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/foodDetailViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
 
 </android.support.design.widget.CoordinatorLayout>

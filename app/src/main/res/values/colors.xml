@@ -17,5 +17,8 @@
     <color name="tab_unselected">#FFFFFF</color>
     <color name="green">#35dc0f</color>
     <color name="detailItems">#D8D8D8</color>
+    <color name="dark_grey_blue">#324d5d</color>
+    <color name="red_pink">#ed3752</color>
+    <color name="app_bar_color">#29b278</color>
 
 </resources>
