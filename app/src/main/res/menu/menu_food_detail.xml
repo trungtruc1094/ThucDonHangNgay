@@ -4,9 +4,8 @@
     tools:context="com.example.trungtrucnguyen.thucdonhangngay.FoodDetailActivity">
     <item
         android:id="@+id/favorite"
-        android:actionLayout="@layout/favorite_btn"
-        android:orderInCategory="100"
+        android:icon="@drawable/favorite_btn"
+        android:checkable="true"
         app:showAsAction="always"
-        android:title="Favorite" />
-
+        android:title="" />
 </menu>

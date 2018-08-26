@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/greenblue</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -20,7 +20,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/currentDate</item>
+        <item name="android:textColor">@color/dark_grey_blue</item>
     </style>
 
     <!--This section is for 2 tabs which are "Theo Ngay" & "Theo Tuan"-->
@@ -61,5 +61,11 @@
         <item name="android:textSize">10sp</item>
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="moment_of_day_title">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dull_orange</item>
     </style>
 </resources>

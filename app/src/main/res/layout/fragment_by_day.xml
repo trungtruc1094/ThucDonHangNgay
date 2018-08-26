@@ -20,18 +20,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
+                    android:layout_width="@dimen/icon_large"
+                    android:layout_height="@dimen/icon_large"
                     android:src="@drawable/breakfast"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    style="@style/moment_of_day_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bua Sang"
-                    android:layout_marginLeft="20dp"/>
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/breakfast"/>
             </LinearLayout>
 
             <!--Content Details-->
@@ -40,10 +42,8 @@
                 android:layout_height="@dimen/cardViewHeight"
                 android:clipToPadding="false"
                 android:overScrollMode="never"
-                android:paddingBottom="10dp"
                 android:paddingLeft="@dimen/card_padding"
                 android:paddingRight="@dimen/card_padding"
-                android:paddingTop="10dp"
                 android:id="@+id/pagerMorning" />
 
         </LinearLayout>
@@ -59,18 +59,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
+                    android:layout_width="@dimen/icon_large"
+                    android:layout_height="@dimen/icon_large"
                     android:src="@drawable/afternoon"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    style="@style/moment_of_day_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bua Trua"
-                    android:layout_marginLeft="20dp"/>
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/lunch"/>
             </LinearLayout>
 
             <!--Content Details-->
@@ -79,10 +81,8 @@
                 android:layout_height="@dimen/cardViewHeight"
                 android:clipToPadding="false"
                 android:overScrollMode="never"
-                android:paddingBottom="10dp"
                 android:paddingLeft="@dimen/card_padding"
                 android:paddingRight="@dimen/card_padding"
-                android:paddingTop="10dp"
                 android:id="@+id/pagerLunch" />
 
         </LinearLayout>
@@ -98,18 +98,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="15dp">
                 <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
+                    android:layout_width="@dimen/icon_large"
+                    android:layout_height="@dimen/icon_large"
                     android:src="@drawable/dinner"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    style="@style/moment_of_day_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bua Toi"
-                    android:layout_marginLeft="20dp"/>
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/dinner"/>
             </LinearLayout>
 
             <!--Content Details-->
@@ -118,10 +120,8 @@
                 android:layout_height="@dimen/cardViewHeight"
                 android:clipToPadding="false"
                 android:overScrollMode="never"
-                android:paddingBottom="10dp"
                 android:paddingLeft="@dimen/card_padding"
                 android:paddingRight="@dimen/card_padding"
-                android:paddingTop="10dp"
                 android:id="@+id/pagerDinner" />
 
         </LinearLayout>

@@ -48,6 +48,25 @@ public class ByDayFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        int[] initialPositions = new int[3];
+        initialPositions[0] = getMiddlePositionForFragmentsOfViewPager(viewPagerBreakfast);
+        initialPositions[1] = getMiddlePositionForFragmentsOfViewPager(viewPagerLunch);
+        initialPositions[2] = getMiddlePositionForFragmentsOfViewPager(viewPagerDinner);
+
+        viewPagerBreakfast.setCurrentItem(initialPositions[0]);
+        viewPagerLunch.setCurrentItem(initialPositions[1]);
+        viewPagerDinner.setCurrentItem(initialPositions[2]);
+    }
+
+    private int getMiddlePositionForFragmentsOfViewPager(ViewPager viewPager){
+        int numberOfViewPagerBreakfast = viewPager.getAdapter().getCount();
+        int initialPosition =  (int) (numberOfViewPagerBreakfast / 2);
+        return initialPosition;
+    }
+
     private void setUpShadowTransformerForFragments(ViewPager viewPager) {
         cardFragmentPagerAdapter = new CardFragmentPagerAdapter(getActivity().getSupportFragmentManager(), DimensionUtils.dpToPixels(2, getActivity()));
         ShadowTransformer fragmentCardShadowTransformer = new ShadowTransformer(viewPager, cardFragmentPagerAdapter);
@@ -57,6 +76,4 @@ public class ByDayFragment extends Fragment {
         viewPager.setPageTransformer(false, fragmentCardShadowTransformer);
         viewPager.setOffscreenPageLimit(3);
     }
-
-
 }

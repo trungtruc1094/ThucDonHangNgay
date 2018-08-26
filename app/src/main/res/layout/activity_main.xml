@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary">
+            android:background="@color/bluey_green">
 
             <LinearLayout
                 android:padding="5dp"
@@ -74,7 +74,7 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:background="@color/bluey_green"
             android:minHeight="?attr/actionBarSize">
 
         </android.support.design.widget.TabLayout>

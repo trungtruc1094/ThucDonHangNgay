@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Color palette -->
+    <color name="greenblue">#30db93</color>
+    <color name="bluey_green">#29b278</color>
+    <color name="white">#ffffff</color>
+    <color name="dark_grey_blue">#324d5d</color>
+    <color name="red_pink">#ed3752</color>
+    <color name="dull_orange">#e37c40</color>
+    <color name="maize">#f0c94d</color>
+    <color name="white_two">#d8d8d8</color>
+
+
     <color name="colorPrimary">#E82435</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#30db93</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorAddFood">#d9d8d8</color>
     <color name="toolbarColor">#E82435</color>
@@ -13,12 +24,13 @@
 
     <color name="currentDate">#02173D</color>
     <color name="backgroundDate">#FFFFFF</color>
-    <color name="tab_selected">#02173D</color>
+    <color name="tab_selected">@color/dark_grey_blue</color>
     <color name="tab_unselected">#FFFFFF</color>
     <color name="green">#35dc0f</color>
     <color name="detailItems">#D8D8D8</color>
-    <color name="dark_grey_blue">#324d5d</color>
-    <color name="red_pink">#ed3752</color>
     <color name="app_bar_color">#29b278</color>
+
+
+
 
 </resources>

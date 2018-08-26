@@ -5,12 +5,14 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="comment_avatar_size">55dp</dimen>
+    <dimen name="icon_large">34dp</dimen>
     <dimen name="icon_normal">30dp</dimen>
     <dimen name="icon_small">20dp</dimen>
-    <dimen name="cardViewHeight">250dp</dimen>
-    <dimen name="card_padding">25dp</dimen>
+    <dimen name="cardViewHeight">275dp</dimen>
+    <dimen name="card_padding">30dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="image_height_detail">256dp</dimen>
     <dimen name="item_height_detail">70dp</dimen>
+    <dimen name="cooking_btn_height">40dp</dimen>
 </resources>

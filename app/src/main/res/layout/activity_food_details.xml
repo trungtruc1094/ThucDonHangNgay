@@ -158,7 +158,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <!--Back button-->
+                    <ImageButton
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/icon_small"
+                        android:layout_height="@dimen/icon_small"
+                        android:background="@drawable/back_arrow"/>
+                    <!--Food Title-->
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20sp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thịt nướng mọi"/>
+                    <!--Favorite icon-->
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:id="@+id/searchItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end|center_vertical">
+                        <ImageView
+                            android:layout_width="@dimen/icon_normal"
+                            android:layout_height="@dimen/icon_normal"
+                            android:src="@drawable/favorite_btn"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -166,11 +205,12 @@
 
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_anchor="@id/appBar"
         app:layout_anchorGravity="bottom|end"
-        android:background="#c1c1"
+        android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -179,18 +219,26 @@
             android:orientation="vertical">
 
             <android.support.design.widget.TabLayout
-                android:id="@+id/htab_tabs"
+                android:id="@+id/foodDetailTabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="58dp" />
+                android:layout_height="50dp" />
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/foodDetailViewPager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:elevation="@dimen/default_elevation"
+        android:layout_height="@dimen/cooking_btn_height"
+        app:layout_anchor="@id/nestedScrollView"
+        app:layout_anchorGravity="bottom"
+        android:background="@drawable/cooking_btn"
+        android:text="COOKING"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

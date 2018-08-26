@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,11 +58,8 @@ public class MainActivity extends AppCompatActivity {
     // Toggle
     public void setupTabLayoutWithViewPager(){
         //tabLayout.setupWithViewPager(viewPager);
-        tabLayoutBy.addTab(tabLayoutBy.newTab().setText("Theo Ngày"));
-        tabLayoutBy.addTab(tabLayoutBy.newTab().setText("Theo Tuần"));
-        tabLayoutBy.setTabTextColors(getResources().getColor(R.color.tab_unselected), getResources().getColor(R.color.tab_selected));
-        tabLayoutBy.setSelectedTabIndicatorColor(getResources().getColor(R.color.tab_selected));
-        tabLayoutBy.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
+
+        setUpTabLayout();
 
         tabLayoutBy.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -95,6 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void setUpTabLayout() {
+        tabLayoutBy.addTab(tabLayoutBy.newTab().setText("Theo Ngày"));
+        tabLayoutBy.addTab(tabLayoutBy.newTab().setText("Theo Tuần"));
+        tabLayoutBy.setTabTextColors(getResources().getColor(R.color.tab_unselected), getResources().getColor(R.color.tab_selected));
+        tabLayoutBy.setSelectedTabIndicatorColor(getResources().getColor(R.color.tab_selected));
+        tabLayoutBy.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
     }
 
     // Toggle Sliding Menu

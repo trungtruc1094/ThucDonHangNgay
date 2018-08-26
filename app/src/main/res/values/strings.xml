@@ -134,4 +134,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="breakfast">Bữa Sáng</string>
+    <string name="dinner">Bữa Tối</string>
+    <string name="lunch">Bữa Trưa</string>
 </resources>
