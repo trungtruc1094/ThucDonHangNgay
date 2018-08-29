@@ -26,6 +26,8 @@
     <color name="backgroundDate">#FFFFFF</color>
     <color name="tab_selected">@color/dark_grey_blue</color>
     <color name="tab_unselected">#FFFFFF</color>
+    <color name="tab_unselected_detail">@color/dark_grey_blue</color>
+    <color name="tab_selected_detail">@color/dull_orange</color>
     <color name="green">#35dc0f</color>
     <color name="detailItems">#D8D8D8</color>
     <color name="app_bar_color">#29b278</color>

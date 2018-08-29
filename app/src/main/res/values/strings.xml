@@ -137,4 +137,5 @@
     <string name="breakfast">Bữa Sáng</string>
     <string name="dinner">Bữa Tối</string>
     <string name="lunch">Bữa Trưa</string>
+    <string name="food_ration">Khẩu Phần</string>
 </resources>

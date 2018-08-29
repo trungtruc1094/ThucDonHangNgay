@@ -59,14 +59,14 @@
                 <!--Items-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/item_height_detail"
-                    android:background="#ffff">
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#ffff"
+                    android:padding="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:layout_margin="10dp"
                         android:gravity="center_vertical"
                         android:background="@drawable/detail_items"
                         android:padding="5dp">
@@ -77,7 +77,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:gravity="center_horizontal">
+                            android:gravity="center">
 
                             <TextView
                                 style="@style/detail_items_title"
@@ -105,7 +105,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:gravity="center_horizontal">
+                            android:gravity="center">
 
                             <TextView
                                 style="@style/detail_items_title"
@@ -132,7 +132,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:gravity="center_horizontal">
+                            android:gravity="center">
 
                             <TextView
                                 style="@style/detail_items_title"
@@ -167,10 +167,13 @@
                     android:padding="5dp">
                     <!--Back button-->
                     <ImageButton
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="@dimen/icon_small"
-                        android:layout_height="@dimen/icon_small"
-                        android:background="@drawable/back_arrow"/>
+                        android:id="@+id/backItem"
+                        android:background="@drawable/btn_default_light"
+                        android:src="@drawable/back_arrow"
+                        android:scaleType="fitCenter"
+                        android:layout_width="@dimen/icon_normal"
+                        android:layout_height="@dimen/icon_normal"
+                        android:layout_gravity="center_vertical"/>
                     <!--Food Title-->
                     <TextView
                         android:layout_marginLeft="20dp"
@@ -182,19 +185,24 @@
                         android:layout_height="wrap_content"
                         android:text="Thịt nướng mọi"/>
                     <!--Favorite icon-->
-                    <LinearLayout
+                    <RelativeLayout
                         android:padding="5dp"
                         android:descendantFocusability="blocksDescendants"
-                        android:id="@+id/searchItem"
+                        android:id="@+id/favoriteLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="end|center_vertical">
-                        <ImageView
+                        android:gravity="center_vertical|right">
+
+                        <ToggleButton
+                            android:id="@+id/button_favorite"
                             android:layout_width="@dimen/icon_normal"
                             android:layout_height="@dimen/icon_normal"
-                            android:src="@drawable/favorite_btn"
-                            />
-                    </LinearLayout>
+                            android:background="@drawable/favorite_btn"
+                            android:checked="false"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn=""/>
+                    </RelativeLayout>
                 </LinearLayout>
 
             </android.support.v7.widget.Toolbar>
@@ -216,7 +224,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/foodDetailTabLayout"
@@ -232,6 +242,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <Button
+        android:id="@+id/cookingBtn"
         android:layout_width="match_parent"
         android:elevation="@dimen/default_elevation"
         android:layout_height="@dimen/cooking_btn_height"

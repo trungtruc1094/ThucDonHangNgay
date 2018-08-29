@@ -1,6 +1,7 @@
 package com.example.trungtrucnguyen.thucdonhangngay.utils;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 
 public class DimensionUtils {
     /**
