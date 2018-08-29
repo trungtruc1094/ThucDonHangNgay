@@ -9,7 +9,7 @@
     android:padding="@dimen/view_left_right_margin" >
 
     <CheckBox
-        android:id="@+id/checkbox_imageview"
+        android:id="@+id/ingredient_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -17,11 +17,10 @@
     </CheckBox>
 
     <TextView
-        android:id="@+id/header_textview"
-        style="@style/ListTitleTextStyle"
+        android:id="@+id/ingredient_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/checkbox_imageview"
+        android:layout_toRightOf="@+id/ingredient_checkbox"
         android:layout_centerVertical="true"
         android:ellipsize="end"
         android:singleLine="true"
@@ -35,8 +34,7 @@
         android:layout_alignParentRight="true">
 
         <TextView
-            android:id="@+id/amount"
-            style="@style/ListSubtitleTextStyle"
+            android:id="@+id/ingredient_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -44,8 +42,7 @@
             android:text="200"/>
 
         <TextView
-            android:id="@+id/unit"
-            style="@style/ListSubtitleTextStyle"
+            android:id="@+id/ingredient_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -53,8 +50,5 @@
             android:lines="1"
             android:text="gram"/>
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
